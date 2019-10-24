@@ -1,0 +1,13 @@
+{
+  "name": "4n70w4/php-dadata-client",
+  "type": "library",
+  "require": {
+    "php": "^7.1.0",
+    "4n70w4/base-client": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DadataClient\\": "src/"
+    }
+  }
+}
