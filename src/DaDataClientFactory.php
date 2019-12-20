@@ -19,7 +19,7 @@ class DaDataClientFactory extends BaseClientFactory {
      *
      * @return \GuzzleHttp\Client
      */
-    public function getTransport($token, $csrftoken, $referer, $base_uri = 'https://dadata.ru/api/v2/') {
+    public function getTransport($token, $csrftoken, $referer = 'https://dadata.ru/suggestions/usage/party/', $base_uri = 'https://dadata.ru/api/v2/') {
         $headers = [
             'Content-Type' => 'application/json',
             'Authorization' => "Token {$token}",
