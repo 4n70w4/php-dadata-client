@@ -12,12 +12,12 @@ class DaDataSuggestionsClientFactory extends BaseClientFactory {
 
 
     /**
-     * @param $token
+     * @param string $token
      * @param string $base_uri
      *
      * @return \GuzzleHttp\Client
      */
-    public function getTransport($token, $base_uri = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/') {
+    public function getTransport(string $token, string $base_uri = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/') {
         $headers = [
             'Content-Type' => 'application/json',
             'Authorization' => "Token {$token}",
