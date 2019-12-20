@@ -27,6 +27,13 @@ class DaDataSuggestionsClient extends BaseClient {
 
 
 
+    /**
+     * @param string $query
+     *
+     * @return string
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function findByIdParty(string $query) : string {
         $data = [];
         $data['query'] = $query;
