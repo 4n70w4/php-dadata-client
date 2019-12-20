@@ -7,7 +7,7 @@ namespace DadataClient;
 use BaseClient\BaseClient;
 use Psr\Http\Message\ResponseInterface;
 
-class DaDataClient extends BaseClient {
+class DaDataSuggestionsClient extends BaseClient {
 
 
 

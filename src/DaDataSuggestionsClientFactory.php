@@ -7,7 +7,7 @@ namespace DadataClient;
 use BaseClient\BaseClientFactory;
 use GuzzleHttp\RequestOptions;
 
-class DaDataClientFactory extends BaseClientFactory {
+class DaDataSuggestionsClientFactory extends BaseClientFactory {
 
 
 
