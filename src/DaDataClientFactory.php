@@ -19,7 +19,7 @@ class DaDataClientFactory extends BaseClientFactory {
      *
      * @return \GuzzleHttp\Client
      */
-    public function getTransport(string $token, string $csrftoken, string $referer = 'https://dadata.ru/suggestions/usage/party/', string $base_uri = 'https://dadata.ru/api/v2/') {
+    public function getTransport(string $token, string $csrftoken, string $referer = 'https://dadata.ru/suggestions/usage/party/', string $base_uri = 'https://dadata.ru/api/v2/', string $proxy = null) {
         $headers = [
             'User-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.101 Safari/537.36',
             'Content-Type' => 'application/json',
@@ -28,7 +28,14 @@ class DaDataClientFactory extends BaseClientFactory {
             'referer' => $referer,
         ];
 
-        return $this->getClient($base_uri, false, [RequestOptions::HEADERS => $headers]);
+        $config = [];
+        $config[RequestOptions::HEADERS] = $headers;
+
+        if($proxy) {
+            $config[RequestOptions::PROXY] = $proxy;
+        }
+
+        return $this->getClient($base_uri, false, $config);
     }
 
 
