@@ -21,6 +21,7 @@ class DaDataClientFactory extends BaseClientFactory {
      */
     public function getTransport(string $token, string $csrftoken, string $referer = 'https://dadata.ru/suggestions/usage/party/', string $base_uri = 'https://dadata.ru/api/v2/') {
         $headers = [
+            'User-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.101 Safari/537.36',
             'Content-Type' => 'application/json',
             'Authorization' => "Token {$token}",
             'x-csrftoken' => $csrftoken,
